@@ -9,6 +9,6 @@ public class MusicPlayerPowerOn implements Command{
 
     @Override
     public void execute() {
-
+        System.out.println(musicPlayer.switchOn());
     }
 }

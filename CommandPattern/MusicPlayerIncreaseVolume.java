@@ -9,6 +9,7 @@ public class MusicPlayerIncreaseVolume implements Command{
 
     @Override
     public void execute() {
+        System.out.println(musicPlayer.increaseVolume());
 
     }
 }

@@ -9,6 +9,7 @@ public class SmartFanSpeedIncrease implements Command {
 
     @Override
     public void execute() {
+        System.out.println(smartFan.increaseFan());
 
     }
 }

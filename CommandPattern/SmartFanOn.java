@@ -9,6 +9,6 @@ public class SmartFanOn implements Command{
 
     @Override
     public void execute() {
-
+        System.out.println(smartFan.switchOn());
     }
 }

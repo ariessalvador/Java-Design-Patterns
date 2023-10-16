@@ -2,10 +2,9 @@ package CommandPattern;
 import java.util.Scanner;
 public class ViewerApp {
     public static void main (String args[]){
-
         Scanner sc = new Scanner(System.in);
         while(true){
-            System.out.println("Select a device:");
+            System.out.println("Select a device: ");
             System.out.println("1. Lights");
             System.out.println("2. Music Player");
             System.out.println("3. Smart Fan");
@@ -81,55 +80,83 @@ public class ViewerApp {
         switch(devChoice){
             case 1: //lights
                 Light light = new Light();
+                RemoteControl lightRemote = new RemoteControl();
+                Command lightPowerOn = new LightSwitchOn(light);
+                Command lightPowerOff = new LightSwitchOff(light);
+                Command lightBrightnessIncrease = new LightBrightnessInrease(light);
+                Command lightBrightnessDecrease = new LightBrightnessDecrease(light);
+                lightRemote.addCommand(lightPowerOn);
+                lightRemote.addCommand(lightPowerOff);
+                lightRemote.addCommand(lightBrightnessIncrease);
+                lightRemote.addCommand(lightBrightnessDecrease);
                 switch (devCommand){
                     case 1:
-                        System.out.println(light.switchOn());
+                        lightRemote.clickButton(0);
                         break;
                     case 2:
-                        System.out.println(light.switchOff());
+                        lightRemote.clickButton(1);
                         break;
                     case 3:
-                        System.out.println(light.increase());
+                        lightRemote.clickButton(2);
                         break;
                     case 4:
-                        System.out.println(light.decrease());
+                        lightRemote.clickButton(3);
                         break;
                     default:
-                        System.out.println("Invalid Choicewdada!");
+                        System.out.println("Invalid Choice!");
                         break;
                 }break;
             case 2: // Music Player
                 MusicPlayer mp =new MusicPlayer();
-                switch (devCommand){
+                RemoteControl musicRemote = new RemoteControl();
+                Command musicOn = new MusicPlayerPowerOn(mp);
+                Command musicOff = new MusicPlayerPowerOff(mp);
+                Command musicVolumeInc= new MusicPlayerIncreaseVolume(mp);
+                Command musicVolumeDec = new MusicPlayerDecreaseVolume(mp);
+                musicRemote.addCommand(musicOn);
+                musicRemote.addCommand(musicOff);
+                musicRemote.addCommand(musicVolumeInc);
+                musicRemote.addCommand(musicVolumeDec);
+                switch(devCommand){
                     case 1:
-                        System.out.println(mp.switchOn());
+                        musicRemote.clickButton(0);
                         break;
                     case 2:
-                        System.out.println(mp.switchOff());
+                        musicRemote.clickButton(1);
                         break;
                     case 3:
-                        System.out.println(mp.increaseVolume());
+                        musicRemote.clickButton(2);
                         break;
                     case 4:
-                        System.out.println(mp.decreaseVolume());
+                        musicRemote.clickButton(3);
                         break;
                     default:
                         System.out.println("Invalid Choice!");
                 }break;
             case 3:
                 SmartFan sf = new SmartFan();
+                RemoteControl smartFanControl = new RemoteControl();
+                Command smartFanOn = new SmartFanOn(sf);
+                Command smartFanOff = new SmartFanOff(sf);
+                Command smartFanInc = new SmartFanSpeedIncrease(sf);
+                Command smartFanDec = new SmartFanSpeedDecrease(sf);
+                smartFanControl.addCommand(smartFanOn);
+                smartFanControl.addCommand(smartFanOff);
+                smartFanControl.addCommand(smartFanInc);
+                smartFanControl.addCommand(smartFanDec);
+
                 switch (devCommand){
                     case 1:
-                        System.out.println(sf.switchOn());
+                        smartFanControl.clickButton(0);
                         break;
                     case 2:
-                        System.out.println(sf.switchOff());
+                        smartFanControl.clickButton(1);
                         break;
                     case 3:
-                        System.out.println(sf.increaseFan());
+                        smartFanControl.clickButton(2);
                         break;
                     case 4:
-                        System.out.println(sf.decreaseFan());
+                        smartFanControl.clickButton(3);
                         break;
                     default:
                         System.out.println("Invalid Choice!");

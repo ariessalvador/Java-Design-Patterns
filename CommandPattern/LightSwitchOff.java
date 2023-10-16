@@ -9,6 +9,6 @@ public class LightSwitchOff implements Command{
 
     @Override
     public void execute() {
-
+        System.out.println(light.switchOff());
     }
 }

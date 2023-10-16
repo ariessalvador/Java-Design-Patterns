@@ -10,10 +10,8 @@ public class RemoteControl {
     public void addCommand(Command command) {
         commands.add(command);
     }
-    public void clickButton() {
-        for (Command command : commands) {
-            command.execute();
-        }
+    public void clickButton(int ind) {
+        commands.get(ind).execute();
         commands.clear();
     }
 

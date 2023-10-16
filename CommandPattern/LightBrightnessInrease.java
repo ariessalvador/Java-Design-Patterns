@@ -9,6 +9,6 @@ public class LightBrightnessInrease implements Command {
 
     @Override
     public void execute() {
-
+        System.out.println(light.increase());
     }
 }

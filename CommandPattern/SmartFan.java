@@ -11,7 +11,7 @@ public class SmartFan {
         return "Smart Fan speed increased!";
     }
     public String decreaseFan(){
-        return "Smart Fan speed Decreased!";
+        return "Smart Fan speed decreased!";
     }
 
 
