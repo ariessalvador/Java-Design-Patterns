@@ -7,4 +7,9 @@ public class RefrigeratorAdapter implements PowerOutlet{
     public String plugIn() {
         return ref.startCooling();
     }
+
+    @Override
+    public String deviceInformation() {
+        return ref.RefrigeratorInformation();
+    }
 }

@@ -7,4 +7,10 @@ public class SmartphoneAdapter implements PowerOutlet{
     public String plugIn() {
         return smartphoneCharger.chargePhone();
     }
+
+    @Override
+    public String deviceInformation() {
+        return smartphoneCharger.SmartPhoneInformation();
+    }
+
 }

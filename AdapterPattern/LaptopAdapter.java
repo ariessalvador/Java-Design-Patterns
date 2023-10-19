@@ -7,4 +7,9 @@ public class LaptopAdapter implements PowerOutlet {
     public String plugIn() {
         return laptop.charge();
     }
+
+    @Override
+    public String deviceInformation() {
+        return laptop.LaptopInformation();
+    }
 }
