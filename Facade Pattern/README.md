@@ -25,3 +25,12 @@ The FrontDesk class serves as the facade, orchestrating seamless interactions be
 The HotelApp class represents the client application that relies on the FrontDesk facade to access and utilize hotel services effortlessly. Through the FrontDesk, HotelApp can seamlessly and efficiently engage with various hotel services, enhancing the overall guest experience.
 
 With the Simplified Hotel Management System, guests can enjoy a convenient and enjoyable stay, while the hotel staff can provide top-notch services in an organized and efficient manner.
+
+### Class Diagram
+![image](https://github.com/ariessalvador/Software-Engineering-1-Projects/assets/142958841/280e1108-7c32-46b3-936d-a381d918d861)
+
+### Demo
+Here's a screenshot demonstrating how the Simplified Hotel Management System works:
+![image](https://github.com/ariessalvador/Software-Engineering-1-Projects/assets/142958841/22ff1cd7-4749-4282-ab78-ccc89af1eb34)
+
+
