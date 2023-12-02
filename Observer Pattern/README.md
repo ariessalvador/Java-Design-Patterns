@@ -44,3 +44,12 @@ The `Subscriber` class represents users or entities subscribed to the news servi
 - The implementation follows object-oriented design principles, promoting loose coupling between the news agency and subscribers.
 
 With the Real-time News Subscription Service, subscribers can stay informed about breaking news in a timely and efficient manner, while the system remains adaptable to future improvements and an increasing number of users.
+
+### Class Diagram
+
+
+
+### Demo
+Here's a screenshot demonstrating how the Real-time News Subscription Service works:
+![image](https://github.com/ariessalvador/Software-Engineering-1-Projects/assets/142958841/d93d57b4-42b8-4a7a-adea-30e605da28b5)
+
