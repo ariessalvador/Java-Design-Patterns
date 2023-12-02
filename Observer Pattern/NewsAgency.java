@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewsAgency implements NewsAgencyObserver {
+public class NewsAgency implements NewsAgencySubject {
     private String localNews;
     private String globalNews;
     private String financialNews;
