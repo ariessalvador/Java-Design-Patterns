@@ -46,7 +46,8 @@ The `Subscriber` class represents users or entities subscribed to the news servi
 With the Real-time News Subscription Service, subscribers can stay informed about breaking news in a timely and efficient manner, while the system remains adaptable to future improvements and an increasing number of users.
 
 ### Class Diagram
-![image](https://github.com/ariessalvador/Software-Engineering-1-Projects/assets/142958841/fa9ad024-4a1e-4694-91bc-1cb4d0e22899)
+![obs diagram](https://github.com/ariessalvador/Software-Engineering-1-Projects/assets/142958841/cd15a98b-4a96-4c51-9cd4-50349198c8ff)
+
 
 ### Demo
 Here's a screenshot demonstrating how the Real-time News Subscription Service works:
