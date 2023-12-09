@@ -41,7 +41,4 @@ With the Centralized Queuing System for Pag-ibig Office, the aim is to ensure an
 
 
 
-### Demo
-
-
 
