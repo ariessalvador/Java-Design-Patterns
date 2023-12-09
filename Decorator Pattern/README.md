@@ -21,8 +21,6 @@ The `GSaveAccount` class is a concrete decorator for the GSave savings account. 
 ### UpSaveAccount
 The `UpSaveAccount` class is a concrete decorator for the UpSave savings account. It extends the `SavingsAccountDecorator` interface and adds functionality such as a 4.0% interest rate and benefits like "With Insurance."
 
-Develop a decorator pattern approach that will implement the given UML diagram:
-![image](https://github.com/ariessalvador/Software-Engineering-1-Projects/assets/142958841/f86725c2-0adc-4a1c-8224-937d7314118a)
 
 ## Decorator Pattern
 
