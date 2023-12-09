@@ -37,6 +37,7 @@ The `QueuingSystem` class is the core component responsible for managing the cen
 With the Centralized Queuing System for Pag-ibig Office, the aim is to ensure an organized queuing process for individuals visiting the office, coupled with the flexibility to handle queue adjustments as needed.
 
 ### Class Diagram
+![singleton](https://github.com/ariessalvador/Software-Engineering-1-Projects/assets/142958841/f3982655-60f1-450a-9ba3-5d5e0e6a09f6)
 
 
 ### Demo
