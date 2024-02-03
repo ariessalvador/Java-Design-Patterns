@@ -34,7 +34,10 @@ The `UserBuilder` class serves as the builder for the User class. It provides me
 ### Example Usage
 
 ```java
-User user = new User.UserBuilder("John", "Doe", "john.doe@example.com")
+User user = new User.UserBuilder()
+                .firstName("John")
+                .lastName("Doe")
+                .email("john.doe@example.com")
                 .address("123 Main St")
                 .phone("123-456-7890")
                 .age(30)
