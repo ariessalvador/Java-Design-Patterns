@@ -36,6 +36,8 @@ The decorator pattern allows for dynamic and flexible features for different typ
 - `showInfo()` returns details of the account, including the account number, account name, and balance.
 
 ## UML Diagram
+![image](https://github.com/ariessalvador/Software-Engineering-1-Projects/assets/142958841/1e4308c5-0628-44b9-83ee-fb8cc1932cc6)
+
 
 
 
