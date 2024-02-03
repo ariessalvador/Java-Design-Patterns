@@ -1,40 +1,38 @@
-# Centralized Queuing System for Pag-ibig Office
+# E-Commerce User Class with Builder Pattern
 
 ## Overview
 
-The Pag-ibig office has implemented a centralized queuing system for three help desk stations. This system manages the queue for individuals visiting the office and provides an online monitoring system for real-time queue updates for remote monitoring.
+In our e-commerce application, customers encounter challenges when creating accounts due to the limitations of the standard constructor for the User class. These challenges include difficulties with registration forms, mandatory input for optional fields, and potential data consistency problems.
 
-## Class Definitions
+To address these issues, we have implemented the Builder Pattern for the User class. This pattern provides a more flexible and user-friendly way of creating User objects, alleviating the constraints of the standard constructor.
 
-### QueuingSystem
-The `QueuingSystem` class is the core component responsible for managing the centralized queue. It supports the following functionalities:
+## User Class Definition
 
-- **Queue Number Assignment:**
-  - Individuals visiting the office obtain a queue number from the centralized system.
+### User
 
-- **Online Monitoring:**
-  - An online monitoring system displays the current queued number in real-time.
+The `User` class now utilizes the Builder Pattern to accommodate varying levels of detail in user profiles. It includes the following features:
 
-- **Help Desk Station Control:**
-  - Each help desk station has the option to reset the queuing number based on an inputted number.
+- **Required Fields:**
+  - firstName
+  - lastName
+  - email
 
-## Expected Behavior
+- **Optional Fields:**
+  - address
+  - phone
+  - age
 
-- Individuals visiting the office obtain a centralized queue number.
-- A real-time online monitoring system displays the current queued number.
-- Help desk stations can reset the queuing number based on an inputted number.
+## Builder Pattern Implementation
 
-## Flexibility and Control
+### UserBuilder
 
-- The system allows for flexibility in managing the queue during specific situations, such as reorganization or technical issues.
-- Help desk stations have the option to reset the queuing number, providing control and adjustment in exceptional circumstances.
+The `UserBuilder` class serves as the builder for the User class. It provides methods to set optional fields, allowing users to create User objects without being constrained by the order of parameters or the need to provide complete information.
 
-## Constraints
+### Example Usage
 
-- The system is designed to maintain an organized queuing process for individuals visiting the office.
-- The reset option offers control and adjustment in exceptional circumstances.
-
-With the Centralized Queuing System for Pag-ibig Office, the aim is to ensure an organized queuing process for individuals visiting the office, coupled with the flexibility to handle queue adjustments as needed.
-
-### Class Diagram
-
+```java
+User user = new User.UserBuilder("John", "Doe", "john.doe@example.com")
+                .address("123 Main St")
+                .phone("123-456-7890")
+                .age(30)
+                .build();
