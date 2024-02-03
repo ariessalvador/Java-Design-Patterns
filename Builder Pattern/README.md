@@ -27,6 +27,8 @@ The `User` class now utilizes the Builder Pattern to accommodate varying levels 
 ### UserBuilder
 
 The `UserBuilder` class serves as the builder for the User class. It provides methods to set optional fields, allowing users to create User objects without being constrained by the order of parameters or the need to provide complete information.
+### Class Diagram
+![BuilderPatternUML](https://github.com/ariessalvador/Software-Engineering-Projects/assets/142958841/35dcadc3-2056-4f8d-9f38-8ec4d45a6b3d)
 
 ### Example Usage
 
