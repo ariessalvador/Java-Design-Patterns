@@ -31,6 +31,8 @@ We have concrete implementations for both attack and defense strategies:
   - `ShieldDefense`: Used by the Knight to defend with a shield.
   - `CreateMagicDefense`: Used by both the Knight and Wizard to create magic barriers.
   - `DodgeDefense`: Used by the Archer to dodge attacks.
+## UML Class Diagram
+![image](https://github.com/ariessalvador/Software-Engineering-Projects/assets/142958841/9b0cdc98-fd37-4291-b530-3acfb8ce4014)
 
 ## Example Usage
 
