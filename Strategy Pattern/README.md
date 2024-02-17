@@ -2,62 +2,53 @@
 
 ## Overview
 
-In our game application, we have three types of characters: Knight, Wizard, and Archer. Each character has specific attack and defense strategies. However, the existing implementation of the Character class lacks flexibility and scalability, especially when it comes to handling different strategies for each character type.
-
-To address these issues, we'll refactor the existing Character class and implement the Strategy Pattern for handling both attack and defense strategies in a more flexible and maintainable way.
+In our game application, we have three types of characters: Knight, Wizard, and Archer. Each character has specific attack and defense strategies. We've implemented the Strategy Pattern to encapsulate these strategies and allow characters to switch them dynamically.
 
 ## Character Class Definition
 
 ### Character
 
-The `Character` class represents the characters in our game. It includes the following features:
+The `Character` class represents the characters in our game. It implements the `CharacterType` interface to support polymorphic behavior for attacks and defense strategies.
 
-- **Attributes:**
-  - type: Represents the type of character (Knight, Wizard, or Archer).
-  - attackStrategy: Defines the attack strategy for the character.
-  - defenseStrategy: Defines the defense strategy for the character.
-
-## Strategy Pattern Implementation
+## Strategy Interfaces
 
 ### AttackStrategy
 
-The `AttackStrategy` interface defines the contract for different attack strategies. Each concrete attack strategy class implements this interface.
+The `AttackStrategy` interface defines the contract for different attack strategies.
 
 ### DefenseStrategy
 
-The `DefenseStrategy` interface defines the contract for different defense strategies. Each concrete defense strategy class implements this interface.
+The `DefenseStrategy` interface defines the contract for different defense strategies.
 
-### Concrete Strategies
+## Concrete Strategies
 
 We have concrete implementations for both attack and defense strategies:
 - For Attack:
-  - CastSpellAttack
-  - ShootArrowAttack
-  - SwingSwordAttack
+  - `CastSpellAttack`: Used by the Wizard to cast spells.
+  - `SwingSwordAttack`: Used by the Knight to swing swords.
+  - `ShootArrowAttack`: Used by the Archer to shoot arrows.
 - For Defense:
-  - ShieldDefense
-  - DodgeDefense
-  - CreateMagicDefense
+  - `ShieldDefense`: Used by the Knight to defend with a shield.
+  - `CreateMagicDefense`: Used by both the Knight and Wizard to create magic barriers.
+  - `DodgeDefense`: Used by the Archer to dodge attacks.
 
 ## Example Usage
 
 ```java
-// Creating a Knight character with specific attack and defense strategies
-Character knight = new Character(new Knight());
+public class GameApp {
+    public static void main(String[] args) {
+        Character knight = new Character(new Knight());
+        knight.attack();
+        knight.defend();
+        System.out.println();
 
-// Creating a Wizard character with specific attack and defense strategies
-Character wizard = new Character(new Wizard());
+        Character wizard = new Character(new Wizard());
+        wizard.attack();
+        wizard.defend();
+        System.out.println();
 
-// Creating an Archer character with specific attack and defense strategies
-Character archer = new Character(new Archer());
-
-// Performing actions with characters
-knight.attack();
-knight.defend();
-
-wizard.attack();
-wizard.defend();
-
-archer.attack();
-archer.defend();
-
+        Character archer = new Character(new Archer());
+        archer.attack();
+        archer.defend();
+    }
+}
