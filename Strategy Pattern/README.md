@@ -1,4 +1,4 @@
-# GameApp Character Class with Strategy Pattern
+# GameApp Character System with Strategy Pattern
 
 ## Overview
 
