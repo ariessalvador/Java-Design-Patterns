@@ -10,7 +10,6 @@ public class Account implements AccountState{
         this.accountState = new ActiveState(this);
     }
 
-    // Getters and Setters
     public String getAccountNumber() {
         return accountNumber;
     }
