@@ -14,21 +14,27 @@ public class ActiveState implements AccountState{
         System.out.println(account.toString());
         System.out.println();
     }
-
     @Override
     public void withdraw(double amount) {
-        if (account.getBalance() >= amount) {
-            account.setBalance(account.getBalance() - amount);
-            System.out.println("Withdrawal successful.");
-            System.out.println(account.toString());
-            System.out.println();
-        } else {
-            System.out.println("Insufficient funds");
-            System.out.println(account.toString());
-            System.out.println();
+        double balance = account.getBalance();
+        switch (Double.compare(balance, amount)) {
+            case 0:
+                account.setBalance(balance - amount);
+                System.out.println("Withdrawal successful." + account.getBalance());
+                System.out.println(account.toString());
+                System.out.println();
+                break;
+            case 1:
+                account.setBalance(balance - amount);
+                System.out.println("Withdrawal successful." + account.getBalance());
+                System.out.println(account.toString());
+                System.out.println();
+                break;
+            case -1:
+                System.out.println("Insufficient funds");
+                break;
         }
     }
-
     @Override
     public void suspend() {
         account.setAccountState(new SuspendedState(account));
