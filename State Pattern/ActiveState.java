@@ -10,7 +10,7 @@ public class ActiveState implements AccountState{
     @Override
     public void deposit(double amount) {
         account.setBalance(account.getBalance() + amount);
-        System.out.println("Deposit successful. New balance: " + account.getBalance());
+        System.out.println("Deposit successful.");
         System.out.println(account.toString());
         System.out.println();
     }
@@ -19,7 +19,7 @@ public class ActiveState implements AccountState{
     public void withdraw(double amount) {
         if (account.getBalance() >= amount) {
             account.setBalance(account.getBalance() - amount);
-            System.out.println("Withdrawal successful. New balance: " + account.getBalance());
+            System.out.println("Withdrawal successful.");
             System.out.println(account.toString());
             System.out.println();
         } else {
