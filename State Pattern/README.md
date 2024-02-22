@@ -21,11 +21,11 @@ Defines the contract for different account states, including methods for deposit
 
 ### Concrete State Classes
 
-1. **ActiveState:**
+1. **`ActiveState`:**
    - Implements the behavior for active accounts.
-2. **SuspendedState:**
+2. **`SuspendedState`:**
    - Implements the behavior for suspended accounts.
-3. **ClosedState:**
+3. **`ClosedState`:**
    - Implements the behavior for closed accounts.
 
 ### Account Class
