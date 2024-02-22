@@ -18,7 +18,6 @@ public class Account implements AccountState{
     public void setAccountState(AccountState accountState) {
         this.accountState = accountState;
     }
-    // Methods
     public void deposit(double amount) {
         accountState.deposit(amount);
     }
