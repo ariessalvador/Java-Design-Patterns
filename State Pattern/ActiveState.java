@@ -11,6 +11,8 @@ public class ActiveState implements AccountState{
     public void deposit(double amount) {
         account.setBalance(account.getBalance() + amount);
         System.out.println("Deposit successful. New balance: " + account.getBalance());
+        System.out.println(account.toString());
+        System.out.println();
     }
 
     @Override
@@ -18,8 +20,12 @@ public class ActiveState implements AccountState{
         if (account.getBalance() >= amount) {
             account.setBalance(account.getBalance() - amount);
             System.out.println("Withdrawal successful. New balance: " + account.getBalance());
+            System.out.println(account.toString());
+            System.out.println();
         } else {
             System.out.println("Insufficient funds");
+            System.out.println(account.toString());
+            System.out.println();
         }
     }
 
