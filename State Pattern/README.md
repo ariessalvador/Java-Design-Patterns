@@ -1,42 +1,38 @@
-# Bank Account Management with State Pattern
+# Bank Account Management System with State Pattern
 
 ## Overview
 
-In our banking application, we need to manage different states of customer accounts, including active, suspended, and closed states. Each state imposes specific rules and restrictions regarding allowed operations, such as deposits, withdrawals, and account status changes. The existing implementation relies on conditional statements within the Account class, making it cumbersome and error-prone to manage multiple states and their associated logic.
+The bank needs to manage different states of customer accounts: active, suspended, and closed. Each state has specific rules and restrictions regarding allowed operations. Implementing the State pattern improves code maintainability and flexibility, allowing the system to handle various account states seamlessly.
 
-To improve code maintainability and flexibility, we'll implement the State pattern:
+## Account Class Definition
 
-1. **Define Account States**: Create separate classes representing different account states: ActiveState, SuspendedState, and ClosedState.
-2. **Implement State Interface**: Define an interface AccountState with methods for common actions like deposit, withdraw, activate, suspend, and close.
-3. **Implement State Behaviors**: Each concrete state class implements the AccountState interface, providing specific behavior for its respective state.
-4. **Update Account Class**:
-    - Include attributes for accountNumber and balance.
-    - Remove state-specific logic from the Account class.
-    - Introduce a reference to the current AccountState object.
-    - Delegate actions like deposit, withdraw, activate, suspend, and close to the current state object through its corresponding methods.
+### Account
 
-## Logic
-
-- If the account is active, you can either suspend it or close it.
-- If the account is suspended, you can either activate or close it.
-- If the account is closed, you cannot suspend or activate it.
-
-## Composition of Account
-
-- **Attributes**:
+The `Account` class represents customer accounts. It includes the following features:
+- Attributes:
   - accountNumber: String
   - balance: Double
   - accountState: AccountState
-
-- **Methods**:
-  - Setter and getter methods
-  - deposit(Double depositAmount): void
-  - withdraw(Double withdrawAmount): void
+- Methods:
+  - deposit(double amount): void
+  - withdraw(double amount): void
   - suspend(): void
   - activate(): void
   - close(): void
-  - toString() // displays account number and balance
+  - toString(): String
 
+## State Interfaces and Classes
+
+### AccountState
+
+The `AccountState` interface defines methods for common actions like deposit, withdraw, activate, suspend, and close.
+
+### Concrete State Classes
+
+We have concrete implementations for different account states:
+- ActiveState: Allows deposits, withdrawals, suspension, and closure.
+- SuspendedState: Disallows deposits and withdrawals but allows activation and closure.
+- ClosedState: Disallows all transactions and state changes.
 
 ## Example Usage
 
@@ -53,24 +49,24 @@ public class AccountTest {
         myAccount.activate(); // displays "Account is activated!"
 
         // Deposit to the account
-        myAccount.deposit(1000.0); // update balance and display account number and current balance.
+        myAccount.deposit(1000.0); // update balance and display account number and current balance
 
         // Withdraw from the account
-        myAccount.withdraw(1323300.0); // update balance and display account number and current balance.
+        myAccount.withdraw(1000.0); // update balance and display account number and current balance
 
         // Close the account
         myAccount.close(); // displays "Account is closed!"
 
-        // Attempt to activate a closed account
-        myAccount.activate(); // displays "You cannot activate a closed account!"
+        // Attempt to activate the closed account
+        myAccount.activate(); // Displays "You cannot activate a closed account!"
 
-        // Attempt to suspend a closed account
-        myAccount.activate(); // displays "You cannot suspend a closed account!"
+        // Attempt to suspend the closed account
+        myAccount.activate(); // Displays "You cannot suspend a closed account!"
 
-        // Attempt to withdraw from a closed account
-        myAccount.withdraw(500.0); // Show message "You cannot withdraw from a closed account!".
+        // Attempt to withdraw from the closed account
+        myAccount.withdraw(500.0); // Shows message "You cannot withdraw from a closed account!"
 
-        // Attempt to deposit into a closed account
-        myAccount.deposit(1000.0); // Show message "You cannot deposit into a closed account!".
+        // Attempt to deposit into the closed account
+        myAccount.deposit(1000.0); // Shows message "You cannot deposit into a closed account!"
     }
 }
