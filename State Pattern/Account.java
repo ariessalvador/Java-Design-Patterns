@@ -10,9 +10,13 @@ public class Account {
         this.balance = balance;
         this.accountState = new ActiveState(this);
     }
+<<<<<<< HEAD
     public String getAccountNumber() {
         return accountNumber;
     }
+=======
+    
+>>>>>>> d1a79836fa222026f4b8a2d0850db63f8fe1a017
     public double getBalance() {
         return balance;
     }
@@ -25,18 +29,23 @@ public class Account {
     public void deposit(double amount) {
         accountState.deposit(amount);
     }
+
     public void withdraw(double amount) {
         accountState.withdraw(amount);
     }
+
     public void suspend() {
         accountState.suspend(this);
     }
+
     public void activate() {
         accountState.activate(this);
     }
+
     public void close() {
         accountState.close(this);
     }
+
     public String toString() {
         return "Account Number: " + accountNumber + ", Balance: " + balance;
     }

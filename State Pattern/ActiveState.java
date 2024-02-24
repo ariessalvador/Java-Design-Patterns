@@ -9,10 +9,15 @@ public class ActiveState implements AccountState {
     }
     @Override
     public void deposit(double amount) {
+<<<<<<< HEAD
         double currentBalance = account.getBalance();
         double newBalance = currentBalance + amount;
         account.setBalance(newBalance);
         System.out.println("Deposit successful. New balance: " + newBalance);
+=======
+        account.setBalance(account.getBalance() + amount);
+        System.out.println("Deposit successful.");
+>>>>>>> d1a79836fa222026f4b8a2d0850db63f8fe1a017
         System.out.println(account.toString());
         System.out.println();
     }
@@ -37,7 +42,6 @@ public class ActiveState implements AccountState {
                 break;
         }
     }
-
     @Override
     public void suspend(Account account) {
         account.setAccountState(new SuspendedState(account));
