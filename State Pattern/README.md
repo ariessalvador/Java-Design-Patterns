@@ -34,6 +34,10 @@ We have concrete implementations for different account states:
 - SuspendedState: Disallows deposits and withdrawals but allows activation and closure.
 - ClosedState: Disallows all transactions and state changes.
 
+## UML Diagram
+![image](https://github.com/ariessalvador/Software-Engineering-Projects/assets/142958841/f174e749-a7cf-4e98-b10a-6268439181a2)
+
+
 ## Example Usage
 
 ```java
