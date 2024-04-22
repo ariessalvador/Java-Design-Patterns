@@ -10,13 +10,6 @@ public class Account {
         this.balance = balance;
         this.accountState = new ActiveState(this);
     }
-<<<<<<< HEAD
-    public String getAccountNumber() {
-        return accountNumber;
-    }
-=======
-    
->>>>>>> d1a79836fa222026f4b8a2d0850db63f8fe1a017
     public double getBalance() {
         return balance;
     }
