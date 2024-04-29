@@ -16,6 +16,7 @@ Each furniture type might have its own unique shipping cost calculation logic. F
 We use the Visitor design pattern to separate the shipping cost calculation logic from the furniture classes. This allows us to add new types of furniture and their corresponding shipping cost calculation methods without modifying existing code.
 
 ## UML Class Diagram
+![visitorpatternUML](https://github.com/ariessalvador/Software-Engineering-Projects/assets/142958841/e5ba1e3f-5315-4784-b123-1798b6ef98d8)
 
 
 ## Implementation Details
