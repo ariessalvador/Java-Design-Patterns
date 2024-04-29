@@ -17,7 +17,6 @@ We use the Visitor design pattern to separate the shipping cost calculation logi
 
 ## UML Class Diagram
 
-![UML Class Diagram](<insert link to UML diagram here>)
 
 ## Implementation Details
 
