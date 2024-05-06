@@ -75,3 +75,6 @@ We split the responsibilities of the original `Order` interface into separate in
 
 
 ### UML Diagram
+![solid](https://github.com/ariessalvador/Software-Engineering-Projects/assets/142958841/6fb0ec52-9008-412f-affe-3b19db71b31b)
+
+
