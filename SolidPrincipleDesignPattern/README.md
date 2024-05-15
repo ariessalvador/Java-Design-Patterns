@@ -7,3 +7,4 @@ The NEU Library offers a variety of resources, including books, theses, capstone
 Refactor the existing code to implement the Dependency Inversion Principle (DIP) while maintaining adherence to other SOLID principles. The refactored program should be flexible enough to accommodate future resource types (e.g., audio books, e-journals) without requiring significant changes. Additionally, create a `TestProgram` to validate the refactored code.
 
 ## UML Diagram
+![solid](https://github.com/ariessalvador/Software-Engineering-Projects/assets/142958841/369149ce-4728-46da-af1d-9db44e77c981)
